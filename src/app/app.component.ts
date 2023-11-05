@@ -28,7 +28,7 @@ export class AppComponent {
         }
         console.log("this,showsidenav--->",this.showSideNav);
         
-        this.showSideNav = currentRoute.routeConfig?.path !== 'login' && currentRoute.routeConfig?.path !== 'otp';
+        this.showSideNav = currentRoute.routeConfig?.path !== '' && currentRoute.routeConfig?.path !== 'otp';
         // this.showSideNav = !['/login', '/otp',''].includes(currentRoute);
         console.log("this. hsow sidenva ---after---<>>>",this.showSideNav);
         
