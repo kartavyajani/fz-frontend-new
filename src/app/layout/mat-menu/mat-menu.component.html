@@ -1,0 +1,20 @@
+<mat-menu #childMenu="matMenu" [overlapTrigger]="false" class="mx-5">
+  <span *ngFor="let child of items">
+    <!-- Handle branch node menu items -->
+    <span *ngIf="child.items && child.items.length > 0">
+      <button mat-menu-item color="primary" [matMenuTriggerFor]="menu.childMenu">
+        <span>{{ child.label }}</span>
+
+      </button>
+      <app-mat-menu #menu [items]="child.items"></app-mat-menu>
+    </span>
+    <!-- Handle leaf node menu items -->
+    <span *ngIf="!child.items || child.items.length === 0">
+      <button mat-menu-item >
+        <span>{{ child.label }}</span>
+      
+      </button>
+    </span>
+  </span>
+  </mat-menu>
+  
