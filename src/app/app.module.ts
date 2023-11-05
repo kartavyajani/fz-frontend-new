@@ -19,6 +19,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatSidenavModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+
+
    
   ],
   providers: [],

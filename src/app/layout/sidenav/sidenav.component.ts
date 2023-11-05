@@ -2,7 +2,7 @@ import { animate, keyframes, style, transition, trigger } from '@angular/animati
 import { Component, Output, EventEmitter, OnInit, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { fadeInOut, INavbarData } from './helper';
-import { navbarData } from './nav-data';
+import { navbarData } from '../../../assets/data/nav-data';
 import { MatMenuComponent } from '../mat-menu/mat-menu.component';
 import { DialogService } from '../dialog.service';
 import { SideNavService } from '../side-nav.service';
@@ -40,7 +40,7 @@ export class SidenavComponent implements OnInit {
   multiple: boolean = false;
   isOpening=false;
   navDataNew=navbarData;
-  @ViewChild(MatMenuComponent ,{static: true}) matMenu!: MatMenuComponent;
+  @ViewChild(MatMenuComponent, {static: true}) matMenu!: MatMenuComponent;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {

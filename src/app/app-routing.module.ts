@@ -7,6 +7,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./core/modules/auth/auth.module').then((m) => m.AuthModule),
   },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./core/modules/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'clientmanagment',
+    loadChildren: () =>
+      import('./core/modules/client/client.module').then((m) => m.ClientModule),
+  },
   // {
   //   path: '',
   //   // component: SidenavComponent,
